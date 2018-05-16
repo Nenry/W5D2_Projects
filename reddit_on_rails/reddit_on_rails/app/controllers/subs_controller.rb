@@ -1,18 +1,9 @@
 class SubsController < ApplicationController
   before_action :require_login
 
-
-
-  belongs_to :moderator
-  primary_key: :id,
-  foreign_key: :moderator_id,
-  class_name: :User
-
-  has_many :posts,
-  dependent: :destroy
-
   def index
     @subs = Sub.all
+    render :index
   end
 
   def show

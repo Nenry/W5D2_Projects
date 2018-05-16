@@ -1,0 +1,4 @@
+<h1>Posts related to <%=@sub.title%></h1>
+<% @sub.posts.each do |post| %>
+<a href="<%=post_url(post)%>"><%=post.title%></a>
+<% end %>

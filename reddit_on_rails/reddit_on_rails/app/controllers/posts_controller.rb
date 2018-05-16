@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+before_action :require_login
   def show
     @post = Post.find_by(id: params[:id])
     render :show
